@@ -1,26 +1,36 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "pirate",
-  "title": "pirate",
-  "description": "",
+  "title": "Pirate",
+  "description": "Browse and stream movies & TV shows via Cinemeta, Torrentio, and Real-Debrid",
   "icon": "extension-icon.png",
   "author": "marcus_nilszen",
   "platforms": [
-    "macOS",
-    "Windows"
+    "macOS"
   ],
   "license": "MIT",
   "commands": [
     {
       "name": "pirate",
-      "title": "pirate",
-      "description": "",
-      "mode": "no-view"
+      "title": "Browse",
+      "description": "Browse popular movies and TV shows",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "realDebridApiKey",
+      "title": "Real-Debrid API Key",
+      "description": "Your Real-Debrid API key from https://real-debrid.com/apitoken",
+      "type": "password",
+      "required": true,
+      "placeholder": "Enter your Real-Debrid API key"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.104.5",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.0.4",
